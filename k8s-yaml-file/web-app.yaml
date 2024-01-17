@@ -13,14 +13,13 @@ spec:
         app: restaurant-web-application
     spec:
       containers:
-        - name: restaurant-web-app-container
-          image: 450595435628.dkr.ecr.us-east-1.amazonaws.com/node.js-restaurant-web-application:node.js-restaurant-web-application_image:latest
-          imagePullPolicy: Always 
-          ports:
-            - containerPort: 3000s
-          imagePullSecrets:
-            - name: regcred
-
+      - name: restaurant-web-app-container
+        image: 450595435628.dkr.ecr.us-east-1.amazonaws.com/node.js-restaurant-web-application:node.js-restaurant-web-application_image:latest
+        imagePullPolicy: Always 
+        ports:
+          - containerPort: 3000
+      imagePullSecrets:
+      - name: regcred
 ---
 
 apiVersion: v1
