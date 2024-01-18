@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: restaurant-web-app-container
-        image: 450595435628.dkr.ecr.us-east-1.amazonaws.com/node.js-restaurant-web-application:v-${{github.run_number}} 
+        image: 450595435628.dkr.ecr.us-east-1.amazonaws.com/node.js-restaurant-web-application:v-$GITHUB_RUN_NUMBER
         imagePullPolicy: Always 
         ports:
           - containerPort: 3000
