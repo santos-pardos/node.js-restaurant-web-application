@@ -24,6 +24,7 @@ jobs:
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
+      
     - name: Taggig
       run: |
         echo "imageTag=${{ github.run_number }}" >> $GITHUB_ENV
