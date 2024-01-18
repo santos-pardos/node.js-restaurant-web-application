@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: restaurant-web-app-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: restaurant-web-application
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: restaurant-web-app-container
-        image: 450595435628.dkr.ecr.us-east-1.amazonaws.com/node.js-restaurant-web-application
+        image: 450595435628.dkr.ecr.us-east-1.amazonaws.com/node.js-restaurant-web-application:latest
         imagePullPolicy: Always 
         ports:
           - containerPort: 3000
